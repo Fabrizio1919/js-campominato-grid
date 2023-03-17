@@ -12,11 +12,10 @@ const container = document.querySelector(".container");
 
 let nMax = 100;
 
-// creo un ciclo n volte per le celle (dove n in questo caso sta per 100)
-
-for (let i = 0; i < nMax; i++) {
-  const cell = `<div class="cell"></div>`;
-  container.innerHTML += cell;
+// creo un ciclo che sta per 100)
+for (let i = 1; i <= nMax; i++) {
+    const cell = `<div class="cell"><p class="m-0">${i}</p></div>`;
+    container.innerHTML += cell;
 }
 
 // seleziono una cella che ha classe cell e active
@@ -30,7 +29,7 @@ for (let i = 0; i < cellEl.length; i++) {
     const thisCell = cellEl[i];
     console.log(thisCell)
     thisCell.addEventListener("click", function() {
-        thisCell.classList.toggle("bg_blue")
+        thisCell.classList.add("bg_blue")
         // this.classList.add("active")
         console.log("Changed the color")
     })

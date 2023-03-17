@@ -6,6 +6,9 @@
 }
 
 .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: calc(100% / 10);
     border: 1px solid black;
     aspect-ratio: 1/1;
