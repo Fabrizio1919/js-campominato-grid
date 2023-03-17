@@ -23,6 +23,12 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.dropdown{
+.diffuculty {
+    width: 10%;
     margin-left: 60%;
+}
+
+footer {
+    height: 45px;
+    background-color: white;    
 }

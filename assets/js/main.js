@@ -7,33 +7,38 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 // Creo una variabile dove salvo il container delle 100 celle (container-grid)
 
 const container = document.querySelector(".container");
+const playButton = document.querySelector('.play')
+playButton.addEventListener('click', function () {
+    container.innerHTML = ""
 
+    const diffucultyEl = document.querySelector('.diffuculty')
+    console.log(diffucultyEl);
+    let nMax = diffucultyEl.value;
+
+    // creo un ciclo che sta per 100)
+    for (let i = 1; i <= nMax; i++) {
+        const cell = `<div class="cell"><p class="m-0">${i}</p></div>`;
+        container.innerHTML += cell;
+    }
+
+    // seleziono una cella che ha classe cell e active
+
+    const cellEl = document.querySelectorAll(".cell")
+
+    // aggiungo eventlisner per la classe active ciclando per la lunghezza dell'array cellEl
+
+
+    for (let i = 0; i < cellEl.length; i++) {
+        const thisCell = cellEl[i];
+        console.log(thisCell)
+        thisCell.addEventListener("click", function () {
+            thisCell.classList.add("bg_blue")
+            // this.classList.add("active")
+            console.log("Changed the color")
+        })
+    }
+})
 // creo un max numero di celle
 
-let nMax = 100;
-
-// creo un ciclo che sta per 100)
-for (let i = 1; i <= nMax; i++) {
-    const cell = `<div class="cell"><p class="m-0">${i}</p></div>`;
-    container.innerHTML += cell;
-}
-
-// seleziono una cella che ha classe cell e active
-
-const cellEl = document.querySelectorAll(".cell")
-
-// aggiungo eventlisner per la classe active ciclando per la lunghezza dell'array cellEl
 
 
-for (let i = 0; i < cellEl.length; i++) {
-    const thisCell = cellEl[i];
-    console.log(thisCell)
-    thisCell.addEventListener("click", function() {
-        thisCell.classList.add("bg_blue")
-        // this.classList.add("active")
-        console.log("Changed the color")
-    })
-
-
-    
-}
