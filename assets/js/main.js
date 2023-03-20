@@ -18,7 +18,7 @@ playButton.addEventListener('click', function () {
     // creo un ciclo che sta per 100)
     for (let i = 1; i <= nMax; i++) {
         const cell = `<div class="cell" style="width: calc(100% / ${Math.sqrt(nMax)}"><p class="m-0">${i}</p></div>`;
-        
+
         container.innerHTML += cell;
     }
 
